@@ -1,5 +1,11 @@
 @use "./vars" as *;
 
+.mfp-bg {
+  z-index: 222;
+}
+.mfp-wrap {
+  z-index: 223;
+}
 .video-section {
   background-image: url(../../images/slider01.jpg);
   background-size: cover;

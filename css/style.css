@@ -4,6 +4,9 @@ body {
   overflow-x: hidden;
   font-size: 15px;
 }
+body.no-scroll {
+  overflow-y: hidden;
+}
 
 a {
   text-decoration: none;
@@ -101,7 +104,7 @@ p {
   transition: 0.3s;
   visibility: hidden;
   opacity: 0;
-  z-index: 3333;
+  z-index: 22;
 }
 .scroll-to-top.active {
   opacity: 1;
@@ -699,6 +702,14 @@ p {
   margin: 20px 0 8px;
   font-size: 22px;
   font-weight: 600;
+}
+
+.mfp-bg {
+  z-index: 222;
+}
+
+.mfp-wrap {
+  z-index: 223;
 }
 
 .video-section {

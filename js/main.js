@@ -30,4 +30,5 @@ let loadingPage = document.querySelector(".loading-section");
 
 window.onload = () => {
   loadingPage.classList.add("hide");
+  document.body.classList.remove("no-scroll");
 };

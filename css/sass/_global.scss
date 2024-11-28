@@ -4,6 +4,9 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   font-size: 15px;
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 a {
   text-decoration: none;
@@ -32,7 +35,7 @@ p {
   width: 100%;
   left: 0;
   z-index: 555555;
-  &.hide{
+  &.hide {
     display: none;
   }
   .circle {
@@ -107,7 +110,7 @@ p {
   transition: 0.3s;
   visibility: hidden;
   opacity: 0;
-  z-index: 3333;
+  z-index: 22;
   &.active {
     opacity: 1;
     visibility: visible;
