@@ -857,6 +857,7 @@ p {
 
 footer {
   background-size: cover;
+  background-position: center;
 }
 footer .company-details .logo img {
   width: 70%;

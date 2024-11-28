@@ -844,7 +844,7 @@
         // counter up
         $(".counter").counterUp({
           delay: 80,
-          time: 1000,
+          time: 2000,
         });
 
         // Trigger Counter Up only once when section comes into view
@@ -856,7 +856,7 @@
             this.destroy();
           },
           {
-            offset: "80%", // Trigger when 80% of the element is visible
+            offset: "0%", // Trigger when 80% of the element is visible
             triggerOnce: true, // Ensure it triggers only once
           }
         );
