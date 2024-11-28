@@ -17,6 +17,11 @@
       font-size: calc(1.5rem + 2vw);
       font-weight: 700;
       margin: 20px 0 0px;
+      &.counter::after {
+        content: "+";
+        font-size: 1.5rem;
+        margin-left: 5px; /* Adjust space between the number and the plus sign */
+      }
     }
     span {
       color: #646262;

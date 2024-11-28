@@ -15,6 +15,9 @@
     background-color: #fff;
     border-radius: 10px;
     min-height: 360px;
+    @media (max-width:676px) {
+      min-height: 300px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;

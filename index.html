@@ -5,6 +5,11 @@
     <meta name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emadadat Tawneya Company</title>
+    <link
+      rel="shortcut icon"
+      href="https://etcfm.net/wp-content/uploads/2023/10/cropped-Fev-192x192.jpg"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,6 +39,14 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!---------------------------------------------- start loading section ----------------------------------------------------------->
+    <div class="loading-section">
+      <div class="circle">
+        <img src="images/company-icon.jpg" alt="icon" width="40px" />
+      </div>
+    </div>
+    <!---------------------------------------------- end loading section ----------------------------------------------------------->
+
     <!-------------------------------- start top-contact-information section ---------------------------------------->
     <div class="top-contact-information py-3">
       <div class="container px-lg-5">
@@ -142,7 +155,7 @@
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <div class="slide-content">
-              <img src="images/slider01.jpg" alt="Slide 1" />
+              <img src="images/slider01.jpg" alt="Slide 1" loading="lazy" />
               <div class="overlay">
                 <div class="container px-lg-5">
                   <h1>Emadadat Tawneya Company</h1>
@@ -155,7 +168,7 @@
           <!-- Slide 2 -->
           <div class="swiper-slide">
             <div class="slide-content">
-              <img src="images/slider02.jpg" alt="Slide 2" />
+              <img src="images/slider02.jpg" alt="Slide 2" loading="lazy" />
               <div class="overlay">
                 <div class="container px-lg-5">
                   <h1>Pioneering Innovation for a Better Future</h1>
@@ -175,6 +188,14 @@
     </div>
     <!---------------------------------------------- end hero section ----------------------------------------------------------->
 
+    <!---------------------------------------------- start scrollToTop section ----------------------------------------------------------->
+    <div class="scroll-to-top">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!---------------------------------------------- end scrollToTop section ----------------------------------------------------------->
+
     <!---------------------------------------------- start achievements  section ---------------------------------------------------->
     <div class="achievements">
       <div class="container px-lg-5">
@@ -184,7 +205,9 @@
               <div class="icon">
                 <img src="images/experiance.png" alt="experiance" />
               </div>
-              <div class="statistic"><h1>14+</h1></div>
+              <div class="statistic">
+                <h1 id="counter1" data-target="14" class="counter">14</h1>
+              </div>
               <div class="name-of-statistic">
                 <span>Years of Experience</span>
               </div>
@@ -195,7 +218,9 @@
               <div class="icon">
                 <img src="images/completed-task.png" alt="projects" />
               </div>
-              <div class="statistic"><h1>100+</h1></div>
+              <div class="statistic">
+                <h1 id="counter2" data-target="100" class="counter">100</h1>
+              </div>
               <div class="name-of-statistic">
                 <span>Projects Completed</span>
               </div>
@@ -206,7 +231,9 @@
               <div class="icon">
                 <img src="images/certificate.png" alt="certification" />
               </div>
-              <div class="statistic"><h1>15+</h1></div>
+              <div class="statistic">
+                <h1 id="counter3" data-target="15" class="counter">15</h1>
+              </div>
               <div class="name-of-statistic"><span>Certifications</span></div>
             </div>
           </div>
@@ -215,7 +242,9 @@
               <div class="icon">
                 <img src="images/team.png" alt="team" />
               </div>
-              <div class="statistic"><h1>150+</h1></div>
+              <div class="statistic">
+                <h1 id="counter4" data-target="150" class="counter">150</h1>
+              </div>
               <div class="name-of-statistic">
                 <span>Expert Team Members</span>
               </div>
@@ -727,7 +756,10 @@
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div class="text">
-                  <p>Riyadh: King Abdullah Road - Al-Muhammadiyah District - First Floor</p>
+                  <p>
+                    Riyadh: King Abdullah Road - Al-Muhammadiyah District -
+                    First Floor
+                  </p>
                 </div>
               </div>
               <div class="address d-flex align-items-center mt-3">
@@ -735,7 +767,10 @@
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div class="text">
-                  <p>Jeddah: Prince Sultan Bin Abdulaziz Road - Al-Murjanah Tower - Seventh Floor</p>
+                  <p>
+                    Jeddah: Prince Sultan Bin Abdulaziz Road - Al-Murjanah Tower
+                    - Seventh Floor
+                  </p>
                 </div>
               </div>
               <div class="call-us d-flex align-items-center mt-3">
@@ -758,7 +793,9 @@
           </div>
         </div>
         <div class="foot text-center py-3">
-          <p>&copy; Copyright 2024. All Rights Reserved Emdadat Tawneya Company</p>
+          <p>
+            &copy; Copyright 2024. All Rights Reserved Emdadat Tawneya Company
+          </p>
         </div>
       </div>
     </footer>
@@ -766,14 +803,24 @@
 
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+      integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Select all counter elements
+        const counters = document.querySelectorAll("[data-target]");
+
         const swiper = new Swiper(".hero-swiper", {
           loop: true,
           autoplay: {
@@ -793,8 +840,28 @@
         });
       });
 
-      //  video popup
       $(document).ready(function () {
+        // counter up
+        $(".counter").counterUp({
+          delay: 80,
+          time: 1000,
+        });
+
+        // Trigger Counter Up only once when section comes into view
+        $(".counter").waypoint(
+          function () {
+            // Start the counter animation when element comes into view
+            $(this).counterUp("start");
+            // Remove the waypoint so the counter doesn't trigger again
+            this.destroy();
+          },
+          {
+            offset: "80%", // Trigger when 80% of the element is visible
+            triggerOnce: true, // Ensure it triggers only once
+          }
+        );
+
+        // video popup
         $(".popup-video").magnificPopup({
           type: "iframe", // This will open the video in an iframe
           iframe: {
