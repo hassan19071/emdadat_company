@@ -3,7 +3,10 @@ body {
   font-family: $bodyFontFamily;
   line-height: 1.6;
   overflow-x: hidden;
-  font-size: 15px;
+  font-size: 16px;
+  @media (max-width:767px) {
+    font-size: 15px;
+  }
   &.no-scroll {
     overflow-y: hidden;
   }
