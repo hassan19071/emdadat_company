@@ -1,0 +1,35 @@
+@use "./vars" as *;
+
+.about-us {
+  .about-text {
+    h2 {
+      @include headTitleStyling;
+    }
+    a {
+      @include buttonStyling;
+    }
+  }
+  .company-purpose {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .icon {
+      img {
+        width: 60px;
+      }
+    }
+    .text {
+      h3 {
+        font-weight: 600;
+        font-size: 22px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

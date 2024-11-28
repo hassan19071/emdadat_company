@@ -1,0 +1,17 @@
+@use "./vars" as *;
+body{
+    font-family: $bodyFontFamily;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $headFontFamily !important;
+    color: #2a2929 !important;
+}
+p{
+    color:#515050
+}

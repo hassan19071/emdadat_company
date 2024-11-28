@@ -1,0 +1,22 @@
+@use "./vars" as *;
+
+.clients {
+  .head-title {
+    h2 {
+      @include headTitleStyling;
+      margin-inline: auto;
+    }
+    p {
+      margin: auto;
+      @media (min-width: 991px) {
+        width: 50%;
+      }
+    }
+  }
+  .owl-carousel {
+    img {
+      filter: brightness(0.3);
+      width: 70%;
+    }
+  }
+}

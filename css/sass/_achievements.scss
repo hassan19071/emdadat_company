@@ -1,0 +1,25 @@
+@use "./vars" as *;
+
+.achievements {
+  margin-top: -80px;
+  position: relative;
+  z-index: 69;
+  .achievement {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    img {
+      max-width: 100%;
+      width: 70px;
+    }
+    h1 {
+      font-size: calc(1.5rem + 2vw);
+      font-weight: 700;
+      margin: 20px 0 0px;
+    }
+    span {
+      color: #646262;
+    }
+  }
+}

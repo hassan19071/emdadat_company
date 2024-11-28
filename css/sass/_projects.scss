@@ -1,0 +1,16 @@
+@use "./vars" as *;
+
+.projects {
+  .head-title {
+    h2 {
+      @include headTitleStyling;
+      margin-inline: auto;
+    }
+    p {
+      margin: auto;
+      @media (min-width: 991px) {
+        width: 50%;
+      }
+    }
+  }
+}

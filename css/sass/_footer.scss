@@ -1,0 +1,76 @@
+@use "./vars" as *;
+
+footer{
+    background-image: url(../../images/footer-bg.jpg);
+    background-size: cover;
+    .company-details{
+        .logo{
+            img{
+                width: 70%;
+                @media (max-width: 991px) {
+                  width: 50%;
+                }
+            }
+        }
+        .social-media-icons {
+            a {
+              width: 35px;
+              height: 35px;
+              background-color: #eee;
+              color: $mainColor;
+              border-radius: 50%;
+              transition: 0.2s;
+              display: inline-block;
+              line-height: 35px;
+              text-align: center;
+              &:hover {
+                background-color: $mainColor;
+                color: #fff;
+              }
+            }
+          }
+    }
+    .quick-links{
+        h3{
+            font-size: 21px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        ul{
+            li{
+                margin-top: 10px;
+                a{
+                    color: #515050;
+                    text-transform: capitalize;
+                    transition: .2s;
+                    &:hover{
+                        letter-spacing: 1.5px;
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+    .company-address{
+        h3{
+            font-size: 21px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .address,.call-us,.message-us{
+            .icon{
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                background-color: #fff;
+                padding: 6px 10px;
+                color: $mainColor;
+                font-size: 18px;
+            }
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .foot{
+        border-top: 1.5px solid #eee;
+    }
+}

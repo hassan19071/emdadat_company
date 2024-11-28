@@ -1,0 +1,227 @@
+@use "./vars" as *;
+
+.top-contact-information {
+  .social-media-icons {
+    a {
+      width: 35px;
+      height: 35px;
+      background-color: #eee;
+      color: $mainColor;
+      border-radius: 50%;
+      transition: 0.2s;
+      display: inline-block;
+      line-height: 35px;
+      text-align: center;
+      &:hover {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+  }
+  .contact-methods {
+    svg {
+      color: $mainColor;
+    }
+    a {
+      color: #2a2929;
+    }
+    @media (max-width: 700px) {
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+  .logo {
+    img {
+      width: 100%;
+      @media (max-width: 991px) {
+        width: 75%;
+      }
+    }
+  }
+  .nav-links {
+    ul {
+      li {
+        a {
+          color: #4e4e4e;
+          text-transform: uppercase;
+          padding-left: 15px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-right: 15px;
+          font-weight: 500;
+          font-size: 14px;
+          transition: 0.3s;
+        }
+        &:not(:last-of-type) {
+          a {
+            &:hover {
+              color: $mainColor;
+            }
+          }
+        }
+        &:last-of-type {
+          a {
+            @include buttonStyling;
+          }
+        }
+      }
+    }
+  }
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    .bar {
+      width: 100%;
+      height: 2.5px;
+      background-color: #3f3d3d;
+      transition: all 0.3s ease;
+    }
+    &.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+  .mobile-links {
+    z-index: 30;
+    background-color: #fff;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+    visibility: visible;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      max-height: 600px;
+    }
+    a {
+      padding: 15px 20px;
+      display: block;
+      border: 1px solid #eee;
+      color: #4e4e4e;
+      text-transform: uppercase;
+      transition: 0.2s;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+.hero-section {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  .swiper {
+    height: 100%;
+    width: 100%;
+    .swiper-pagination {
+      display: none;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+      &::after {
+        font-size: 15px;
+        color: $mainColor;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+      @media (min-width: 992px) {
+        display: flex;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 0.3s;
+        &:hover {
+          background-color: $mainColor;
+          &::after {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:first-of-type {
+        justify-content: flex-start;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          to right,
+          #fff,
+          rgba(100, 100, 100, 0.3)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        z-index: 2;
+        padding: 2rem;
+        h1 {
+          font-size: calc(2.3rem + 2vw);
+          font-family: "Montserrat", sans-serif;
+          margin-bottom: 1rem;
+          color: #2a2929;
+          font-weight: 700;
+          text-transform: capitalize;
+          @media (min-width: 991px) {
+            width: 70%;
+          }
+        }
+
+        p {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+          color: #4e4d4d;
+        }
+        .button {
+          @include buttonStyling;
+        }
+      }
+    }
+  }
+}
